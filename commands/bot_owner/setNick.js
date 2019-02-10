@@ -11,11 +11,11 @@ exports.exec = async (Bastion, message, args) => {
 
   if (args.length) {
     await message.guild.me.setNickname(args.join(' '));
-    description = `${Bastion.user.username}'s nick is now set to **${args.join(' ')}** on this server.`;
+    description = `Ник ${Bastion.user.username} сменен на **${args.join(' ')}**.`;
   }
   else {
     await message.guild.me.setNickname('');
-    description = `${Bastion.user.username}'s nick has been reset on this server.`;
+    description = `Ник ${Bastion.user.username} возвращен на исходный`;
   }
 
   await message.channel.send({
@@ -36,7 +36,7 @@ exports.config = {
 
 exports.help = {
   name: 'setNick',
-  description: 'Sets the nickname of Bastion in the current Discord server.',
+  description: 'Ставит новый ник боту в Discord.',
   botPermission: 'CHANGE_NICKNAME',
   userTextPermission: 'CHANGE_NICKNAME',
   userVoicePermission: '',

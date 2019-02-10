@@ -23,7 +23,7 @@ exports.config = {
 
 exports.help = {
   name: 'catFact',
-  description: 'Shows a random fact about cats.',
+  description: 'Отправляет случайный факт про котиков.',
   botPermission: '',
   userTextPermission: '',
   userVoicePermission: '',

@@ -14,7 +14,7 @@ exports.exec = async (Bastion, message, args) => {
   await message.channel.send({
     embed: {
       color: Bastion.colors.GREEN,
-      description: `${Bastion.user.username}'s avatar changed!`
+      description: `Аватар ${Bastion.user.username} сменен.`
     }
   }).catch(e => {
     Bastion.log.error(e);
@@ -29,10 +29,10 @@ exports.config = {
 
 exports.help = {
   name: 'setAvatar',
-  description: 'Sets the avatar of %bastion%.',
+  description: 'Ставит новую аватарку для бота.',
   botPermission: '',
   userTextPermission: '',
   userVoicePermission: '',
-  usage: 'setavatar <image_url>',
+  usage: 'setavatar <url>',
   example: [ 'setavatar https://example.com/avatar.jpeg' ]
 };

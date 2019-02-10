@@ -11,7 +11,7 @@ exports.exec = async (Bastion, message, args) => {
     await message.channel.send({
       embed: {
         color: Bastion.colors.GREEN,
-        description: `${Bastion.user.username}'s username is now set to **${args.join(' ')}**`
+        description: `Ник ${Bastion.user.username} теперь изменен на **${args.join(' ')}**`
       }
     }).catch(e => {
       Bastion.log.error(e);
@@ -27,7 +27,7 @@ exports.config = {
 
 exports.help = {
   name: 'setUsername',
-  description: 'Changes the username of %bastion%.',
+  description: 'Меняет ник бота.',
   botPermission: '',
   userTextPermission: '',
   userVoicePermission: '',

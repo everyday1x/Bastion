@@ -13,7 +13,7 @@ exports.exec = async (Bastion, message, args) => {
     await message.channel.send({
       embed: {
         color: Bastion.colors.GREEN,
-        description: `My activity is now set to **${args.type} ${args.name}**`
+        description: `Активность теперь **${args.type} ${args.name}**`
       }
     }).catch(e => {
       Bastion.log.error(e);
@@ -26,7 +26,7 @@ exports.exec = async (Bastion, message, args) => {
     await message.channel.send({
       embed: {
         color: Bastion.colors.GREEN,
-        description: `My activity has been reset to the default: **${Bastion.configurations.game.type} ${game}**`
+        description: `Активность возвращена на исходную: **${Bastion.configurations.game.type} ${game}**`
       }
     }).catch(e => {
       Bastion.log.error(e);
@@ -46,7 +46,7 @@ exports.config = {
 
 exports.help = {
   name: 'setActivity',
-  description: 'Sets the activity of %bastion%.',
+  description: 'Меняет статус бота.',
   botPermission: '',
   userTextPermission: '',
   userVoicePermission: '',

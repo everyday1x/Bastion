@@ -8,7 +8,7 @@ exports.exec = async (Bastion, message) => {
   let confirmation = await message.channel.send({
     embed: {
       color: Bastion.colors.ORANGE,
-      description: 'Are you sure you want to shut me down?'
+      description: 'Вы уверены, что хотите мне выключить?'
     }
   });
 
@@ -23,7 +23,7 @@ exports.exec = async (Bastion, message) => {
     if (answer.content.toLowerCase().startsWith('yes')) {
       await message.channel.send({
         embed: {
-          description: 'GoodBye :wave:! See you soon.'
+          description: 'Пока :wave:! Скоро встретимся.'
         }
       });
 
@@ -39,12 +39,12 @@ exports.exec = async (Bastion, message) => {
       }
 
       Bastion.log.console('\n');
-      Bastion.log.info('GoodBye! See you next time.');
+      Bastion.log.info('Пока! Скоро встретимся.');
     }
     else {
       await message.channel.send({
         embed: {
-          description: 'Cool! I\'m here.'
+          description: 'Круто, я живой!'
         }
       });
     }
@@ -59,7 +59,7 @@ exports.config = {
 
 exports.help = {
   name: 'shutdown',
-  description: 'Shuts down bastion and terminates the process.',
+  description: 'Выключает бота.',
   botPermission: '',
   userTextPermission: '',
   userVoicePermission: '',

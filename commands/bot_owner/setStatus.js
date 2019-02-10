@@ -11,7 +11,7 @@ exports.exec = async (Bastion, message, args) => {
     await message.channel.send({
       embed: {
         color: Bastion.colors.GREEN,
-        description: `${Bastion.user.username}'s status is now set to **${args.status}**`
+        description: `Статус ${Bastion.user.username} изменен на **${args.status}**`
       }
     }).catch(e => {
       Bastion.log.error(e);
@@ -23,7 +23,7 @@ exports.exec = async (Bastion, message, args) => {
     await message.channel.send({
       embed: {
         color: Bastion.colors.GREEN,
-        description: `${Bastion.user.username}'s status is now set to the default status **${Bastion.configurations.status}**`
+        description: `Статус ${Bastion.user.username} На исходный статус **${Bastion.configurations.status}**`
       }
     }).catch(e => {
       Bastion.log.error(e);
@@ -42,7 +42,7 @@ exports.config = {
 
 exports.help = {
   name: 'setStatus',
-  description: 'Sets the status of %bastion%.',
+  description: 'Ставит новый статус для бота.',
   botPermission: '',
   userTextPermission: '',
   userVoicePermission: '',
